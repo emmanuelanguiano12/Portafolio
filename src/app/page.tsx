@@ -1,113 +1,112 @@
 import Image from "next/image";
+import { CardHoverEffectDemo } from "./components/Hover-Card";
+import GrommetIconsCode from "./components/Icons/GrommetIconsCode";
+import MdiShieldAccount from "./components/Icons/MdiShieldAccount";
+import { Navbar } from "./components/Navbar";
+import { Section } from "./components/Section";
+import cloudPractitionier from "/public/Images/Cloud_Practitioner.png";
+import UdemyNext from "/public/Images/UdemyNext.png";
+import SolutionsArchitect from "/public/Images/SolutionsArchitect.png";
+import ImageEmmanuel from "/public/Images/ImageEmmanuel.png";
+import { Footer } from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+    <>
+      <div
+        className="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
+        bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
+        dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+      ></div>
+      <header className="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
+        <Navbar />
+      </header>
+      <main>
+        <Section />
+
+        <section
+          id="Proyectos"
+          className="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+        >
+          <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+            <GrommetIconsCode />
+            Proyectos
+          </h2>
+          <CardHoverEffectDemo />
+        </section>
+
+        <section
+          id="About"
+          className="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl"
+        >
+          <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+            <MdiShieldAccount />
+            Sobre mí
+          </h2>
+          <article className="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
+            <div className="[&>p]:mb-4 [&>p>strong]:text-red-400 dark:[&>p>strong]:text-red-400 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1">
+              <p>
+                Soy Emmanuel Anguiano. Empecé a programar en la pandemia del
+                2020, quería aprender cosas nuevas y tener nuevos retos. Soy
+                graduaro de la carrera de Tecnologías de Internet de mi cuidad,
+                en donde descubrí mi pasión por el desarrollo web.
+              </p>
+              <p>
+                Entre mis éxitos destaco mis pequeños proyectos que he hecho y
+                mis certificaciones que tengo, las cuales son:
+              </p>
+              <p className="flex items-center justify-center space-x-4 mr-10">
+                <Image
+                  src={cloudPractitionier}
+                  width={150}
+                  height={150}
+                  alt="Cloud Practitioner"
+                />
+                <Image
+                  src={UdemyNext}
+                  width={150}
+                  height={150}
+                  alt="Udemy Next"
+                />
+                <Image
+                  src={SolutionsArchitect}
+                  width={150}
+                  height={150}
+                  alt="Solutions Architect"
+                />
+              </p>
+              <p>
+                En 2023 participé en un proyecto de una empresa de logistica
+                para el puerto de Manzanillo, Colima, en el cual fui el
+                encargado de diseñar y hacer funcionar su página y un sistema de
+                logistica en Visual Basic. Fue un reto muy importante para mí ya
+                que era mi primera vez como desarrollador y trabajando en
+                conjunto a otra persona.{" "}
+                <strong>
+                  Fue muy bueno estar ahí ya que me sirvió como experencía para
+                  ver la realidad de este grandioso mundo.
+                </strong>
+              </p>
+              <p>
+                Actualmente me desempeño como Desarrollador Frontend en la
+                empresa Mxmart Solutions en donde he participado en algunos
+                proyectos. También estudio para obtener mis certificaciones y
+                aprender mas sobre React, Next y cualquier otra tecnología que me
+                motive a seguir adelante.
+              </p>
+            </div>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src={ImageEmmanuel}
+              height={368}
+              width={792}
+              alt="Emmanuel Anguiano"
+              className="order-1 object-cover w-64 h-full p-1 md:order-2 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 "
             />
-          </a>
-        </div>
-      </div>
+          </article>
+        </section>
+      </main>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <Footer />
+    </>
   );
 }
