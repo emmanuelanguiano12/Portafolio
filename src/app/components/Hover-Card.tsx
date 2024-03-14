@@ -11,39 +11,27 @@ export function CardHoverEffectDemo() {
 }
 export const projects = [
   {
-    title: "Stripe",
+    title: "Blog and Book Store",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
+      "Este proyecto es una plataforma integral que ofrece a los usuarios una experiencia completa relacionada con el campo de la programación y la educación tecnológica. Puedes ver los últimos blogs y comprar libros.",
+    link: "https://github.com/emmanuelanguiano12/Nex13-Strapi-Back-Front",
   },
   {
-    title: "Netflix",
+    title: "URL Shortener App",
     description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
+      "Este proyecto utiliza React y Vite. Puede ingresar su URL y esta aplicación generará una URL más corta con el dominio de la aplicación.",
+    link: "https://github.com/emmanuelanguiano12/react-firebase9-router6-vite",
   },
   {
-    title: "Google",
+    title: "Realtime Chat",
     description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
+      "Este proyecto es una aplicación de chat en tiempo real, utiliza Firebase como base de datos en tiempo real y React como frameworok.",
+    link: "https://github.com/emmanuelanguiano12/RealTimeChat-Firebase",
   },
   {
-    title: "Meta",
+    title: "Todo App",
     description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
-  },
-  {
-    title: "Amazon",
-    description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    link: "https://amazon.com",
-  },
-  {
-    title: "Microsoft",
-    description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    link: "https://microsoft.com",
+      "Esta es una aplicación Todo donde puedes agregar tareas o eliminarlas. Utiliza Next, Prisma, MongoDB, Clerk para la autenticación y Flowbite para Front.",
+    link: "https://github.com/emmanuelanguiano12/clerk-prisma-zod-next",
   },
 ];

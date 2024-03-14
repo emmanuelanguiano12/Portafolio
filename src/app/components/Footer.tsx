@@ -1,12 +1,37 @@
-const ClassName = "rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
+"use client";
+
+const ClassName =
+  "rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900";
+
+const copiarTexto = async () => {
+  const textoCopiado = "emmanuelanguiano120502@gmail.com";
+  try {
+    await navigator.clipboard.writeText(textoCopiado);
+    console.log("Contenido copiado al portapapeles");
+    mostrarAlerta()
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const mostrarAlerta = () => {
+  const alerta = document.createElement('div');
+  alerta.className = 'p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400 fixed top-0 left-0 w-full z-50';
+  alerta.setAttribute('role', 'alert');
+  alerta.innerHTML = `
+      <span class="font-medium">Info alert!</span> Correo copiado al portapapeles
+  `;
+  document.body.insertBefore(alerta, document.body.firstChild);
+  setTimeout(() => {
+      document.body.removeChild(alerta);
+  }, 3000);
+};
 
 export const Footer = () => {
   return (
     <>
-      {/*Footer container*/}
       <footer className="flex flex-col items-center dark:text-white">
         <div className="container pt-9">
-          {/* Social media icons container */}
           <div className="mb-6 flex justify-center space-x-2">
             <a
               href="https://www.linkedin.com/in/emmanuel-anguiano-058021291/"
@@ -38,6 +63,23 @@ export const Footer = () => {
                 </svg>
               </span>
             </a>
+            <button onClick={copiarTexto}>
+              <a
+                type="button"
+                className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
+                data-twe-ripple-init
+              >
+                <span className="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 488 512"
+                  >
+                    <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+                  </svg>
+                </span>
+              </a>
+            </button>
           </div>
         </div>
         <div className="w-full bg-black/5 p-4 text-center">
