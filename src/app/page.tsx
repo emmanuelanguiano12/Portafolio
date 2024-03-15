@@ -17,7 +17,7 @@ export default function Home() {
         <Navbar />
       </header>
 
-      <main>
+      <main className="m-2">
         <Section />
         <SectionProjects />
         <SectionAbout />

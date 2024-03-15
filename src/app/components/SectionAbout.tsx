@@ -28,7 +28,7 @@ export const SectionAbout = () => {
                 Entre mis éxitos destaco mis pequeños proyectos que he hecho y
                 mis certificaciones que tengo, las cuales son:
               </p>
-              <p className="flex items-center justify-center space-x-4 mr-10">
+              <p className="flex flex-wrap justify-center space-y-4 md:space-y-2 md:space-x-4">
                 <Image
                   src={cloudPractitionier}
                   width={150}

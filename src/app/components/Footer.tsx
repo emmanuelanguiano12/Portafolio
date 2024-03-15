@@ -63,8 +63,8 @@ export const Footer = () => {
                 </svg>
               </span>
             </a>
-            <button onClick={copiarTexto}>
               <a
+              onClick={copiarTexto}
                 type="button"
                 className="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
                 data-twe-ripple-init
@@ -79,7 +79,6 @@ export const Footer = () => {
                   </svg>
                 </span>
               </a>
-            </button>
           </div>
         </div>
         <div className="w-full bg-black/5 p-4 text-center">
